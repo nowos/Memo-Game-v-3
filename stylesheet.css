@@ -1,0 +1,365 @@
+/*navigation*/
+h1,h2{
+   color:#000066;
+}
+
+#navbarNavAltMarkup {
+}
+.jumbotron.jumbotron-fluid {
+}
+.container {
+}
+.container > p {
+   color:#cc0000;
+}
+.display-3 {
+}
+.lead {
+}
+.navbar.navbar-expand-lg.navbar-light.bg-light {
+}
+.navbar-brand {
+}
+.navbar-toggler {
+}
+.navbar-toggler-icon {
+}
+.navbar-nav {
+}
+.collapse{
+}
+.navbar-collapse{
+}
+.nav-item.nav-link.active {
+}
+.sr-only {
+}
+.nav-item.nav-link {
+}
+.nav-item.nav-link.disabled {
+}
+/*poza schematem*/
+
+.jumbotron-fluid2{
+   max-height: 150px;
+}
+/*nad stopką RULES*/
+.container2{
+   height: 700px;
+   margin: 40px 10px;
+}
+.container2 > h1{
+   font-size: 30px;
+}
+.container2 > h2{
+   font-size: 25px;
+}
+.containerFluid1{
+   margin:0 auto;
+   max-width: 800px;
+}
+.deskContainer{
+   margin:0 auto;
+   width:fit-content;
+   background-color:#f5f9fd;
+   border: 1px solid #69b0f7;
+}
+
+/*level1*/
+.imagesContainer1, .imagesContainer2, .imagesContainer3, .imagesContainer4{
+   width: fit-content;
+   padding: 0px;
+   margin: 0 auto;
+   height: auto;
+
+}
+
+.emptyImg{
+   width: 150px;
+   height: 150px;
+   background-color:#ccccff;
+   border: 1px black; 
+   margin: 10px 10px;
+   border-radius: 10px;
+   display:inline-block;
+}
+
+.topContainer{
+   margin: 50px auto !important;
+   max-width: 600px;
+   margin: 0 auto;
+}
+.topContainer2{
+   max-width: 700px;
+   margin: 50px auto;
+}
+.startContainer{
+   max-width: 600px;
+   margin: 0 auto;
+   height: 60px;
+   display: flex;
+}
+.btStart1{
+   width: 120px;
+   height: 35px;
+   font-size: 20px;
+   margin: 30px auto;
+   margin-left: 10px;
+}  
+.btStart2{
+   width: 120px;
+   height: 35px;
+   font-size: 20px;
+   margin: 30px auto;
+   margin-left: 10px;
+}     
+.btStart3{
+   width: 120px;
+   height: 35px;
+   font-size: 20px;
+   margin: 30px auto;
+   margin-left: 10px;
+}
+.round{
+   margin:0 auto;
+   height: 35px;
+   width: 120px; 
+   border: 1px solid blue;
+   border-radius: 50%;
+   padding: 0px 10px;
+   font-size: 20px;
+   text-align: center;
+}
+.d1,.d2,.d3,.d4,.d5,.d6,.d7,.d8,.d9,.d10,.d11,.d12,.d13,.d14,.d15,.d16,.d17,.d18,.d19,.d20{
+}
+.matched{
+   content: url("images/CTMEM.jpg")!important;
+}
+#view{
+   visibility: hidden;
+   font-size: 1px;
+}
+#inlineFormInputName {
+}
+#inlineFormInputLastName {
+}
+.form-row.align-items-center {
+}
+.col-sm-3 {
+}
+.sr-only {
+}
+.input-group.mb-2.mb-sm-0 {
+}
+.input-group-addon {
+}
+.col-auto {
+}
+.sr-only{  
+}
+.btn.btn-primary {
+}
+.form-control{
+}
+.form-check{
+} 
+.mb-2{
+}
+.mb-sm-0{
+}
+
+/*ranking*/
+.username{
+   margin: 0 auto;
+   max-width: 950px ;
+   margin-left: 25px;
+}
+.ranking{
+   max-width: 550px;
+   margin: 30px auto;
+}
+.table {
+}
+.footer{  
+}
+footer{
+   margin: 0 auto;
+   width: 100%;
+   font-size: 18px;
+   font-family:serif;
+   text-align: center;
+   border-top: 1px solid #ccccff;
+}
+
+.jumbotron2{
+   max-height: 800px;
+}
+.submitContainer{
+   margin-top: 20px;
+}
+.submit{
+   text-decoration: none;
+   color:#056fd8;
+
+}
+.btback{
+   text-decoration: none;
+   color:#056fd8;
+}
+
+.User1, .User2 , .User3, .User4, .User5, .User6, .User7, .User8, .User9, .User10{   
+}
+.Score1, .Score2, .Score3, .Score4, .Score5, .Score6, .Score7, .Score8, .Score9, .Score10{   
+}
+
+/*Animacje*/
+.animated { 
+   animation-duration: 1.5s; 
+   animation-fill-mode: both; 
+   animation-timing-function: ease-in; 
+} 
+
+@keyframes bounceOut { 
+   0% { 
+      transform: scale(1); 
+   } 
+   25% { 
+      transform: scale(.95); 
+   } 
+   50% { 
+      opacity: 1; 
+      transform: scale(1.1); 
+   } 
+   100% { 
+      opacity: 0; 
+      transform: scale(.3); 
+   } 
+} 
+.bounceOut { 
+   animation-name: bounceOut; 
+}
+.animated2 { 
+   animation-duration: 2s; 
+   animation-fill-mode: both; 
+   animation-timing-function: ease-in; 
+} 
+
+@keyframes flash { 
+   0%, 50%, 100% {opacity: 1;} 
+   25%, 75% {opacity: 0;} 
+} 
+.flash { 
+   animation-name: flash; 
+}
+/*responsywność*/
+
+@media screen and (min-width: 700px) and (max-width: 900px) { 
+
+   .emptyImg{
+      width: 150px;
+      height: 150px;
+      background-color:#056fd8;
+      border: 1px black; 
+      margin: 5px auto;
+      display: inline-block;
+   }
+   .btStart1, .btStart2, .btStart3{
+      margin-left: 0px;
+      margin-top: 0px;
+      padding-top: 0px;
+   };
+}
+@media screen and (min-width: 480px) and (max-width: 700px) { 
+
+   .emptyImg{
+      width: 100px;
+      height: 100px;
+      background-color:#ccccff;
+      border: 1px black; 
+      margin: 5px 10px;
+   }
+   .btStart1, .btStart2, .btStart3{
+      margin-left: 10px;
+      margin-top: 0px;
+      padding-top: 0px;
+      width: 100px !important;
+   }
+   .username{
+      margin-right: 25px;
+   }
+}
+@media screen and (min-width: 1px) and (max-width: 340px){
+
+   .emptyImg{
+      width: 65px !important;
+      height: 65px !important;
+   }
+   .container > h1{
+      font-size: 45px !important;
+   }
+} 
+
+@media screen and (min-width: 1px) and (max-width: 480px) { 
+
+   .emptyImg{
+      width: 80px;
+      height: 80px;
+      background-color:#ccccff;
+      border: 1px black; 
+      margin: 5px 10px;
+   }
+   .btStart1, .btStart2, .btStart3{
+      margin-top: 20px;
+      padding-top: 0px;
+      width: 90px;
+   }
+   .username{
+      margin-right: 25px;
+   }
+   .jumbotron{
+      max-height: 250px;
+   }
+   .topContainer{
+      margin-top: 0px !important;
+      max-height: 200px;
+   }
+   .topContainer2{
+      margin-top: 50px;
+      max-height: 800px;
+   }
+   body{
+      margin: 10px 5px;
+   }
+   .container > h1{
+      font-size: 45px !important;
+   }
+}
+
+@media screen and (min-width: 500px) and (max-width: 700px) { 
+   .emptyImg{
+      width: 100px;
+      height: 100px;
+      background-color:#ccccff;
+      border: 1px black; 
+      margin: 5px 10px;
+   }
+   .btStart1, .btStart2, .btStart3{
+      margin-left: 0px;
+      margin-top: 0px;
+      padding-top: 0px;
+   }
+   .username{
+      margin-right: 25px;
+   }
+   .jumbotron{
+      max-height: 200px;
+   }
+   body{
+      margin: 10px 5px;
+   }
+   .container > h1{
+      font-size: 50px !important;
+   }
+}
+
+

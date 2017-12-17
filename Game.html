@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <title>Memo</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+      <link type="text/css" rel="stylesheet" href="stylesheet.css">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>  
+   </head>
+   <body>
+      <div class="jumbotron jumbotron-fluid">
+         <div class="container">
+            <h1 class="display-3">Memory Game</h1>
+            <p class="lead">Coders Trust Poland </p>
+         </div>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <a class="navbar-brand" href="#">Menu</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+               <a class="nav-item nav-link" href="index.html">About <span class="sr-only">(current)</span></a>
+            </div>
+         </div>
+      </nav> 
+
+      <!--Username & Start-->
+      <div class="topContainer"> 
+         <!--Start-->
+         <div class="startContainer">
+            <button class ="btStart1">Level 1</button>
+            <button class ="btStart2">Level 2</button>
+            <button class ="btStart3">Level 3</button>
+         </div>
+      </div>
+      <!--Cards-->
+
+      <div class="containerFluid1">
+         <div id="view">1</div>
+         <!--pole gry-->
+         <div class="round">Round 1</div>
+         <div class ="deskContainer" id="DK">
+            
+         </div>
+      </div>
+
+      <div class="topContainer2">
+         <div class="username">
+            <div id="view2"></div>
+            <form>
+               <div class="form-row align-items-center">
+                  <div class="col-sm-3">
+                     <label class="sr-only" for="inlineFormInputName">Name</label>
+                     <input type="text" class="form-control mb-2 mb-sm-0" id="inlineFormName" placeholder="Name">
+                  </div>
+                  <div class="col-sm-3">
+                     <label class="sr-only" for="inlineFormInputGroupUsername">Username</label>
+                     <div class="input-group mb-2 mb-sm-0">
+                        <div class="input-group-addon"></div>
+                        <input type="text" class="form-control" id="inlineFormLastName" placeholder="Last Name">
+                     </div>
+                  </div>
+                  <div class="col-auto">
+                     <div class="form-check mb-2 mb-sm-0">
+                     </div>
+                  </div>
+                  <div class="col-auto">  
+                  </div>
+               </div>
+            </form>
+            <div class="submitContainer">
+               <button class="submit">Submit</button> 
+               <button class="btback"><a href="#">Back to the start</a></button>
+            </div>
+         </div> 
+
+         <!--Ranking-->    
+         <div class="ranking">
+
+            <table class="table">
+               <thead>
+                  <tr>
+                     <th scope="col"></th>
+                     <th scope="col">Username</th>
+                     <th scope="col">Score (Rounds)</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th scope="row">1</th>
+                     <td class="User1"></td>
+                     <td class="Score1">30</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">2</th>
+                     <td class="User2"></td>
+                     <td class="Score2">30</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">3</th>
+                     <td class="User3"></td>
+                     <td class="Score3">32</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">4</th>
+                     <td class="User4"></td>
+                     <td class="Score4">33</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">5</th>
+                     <td class="User5"></td>
+                     <td class="Score5">34</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">6</th>
+                     <td class="User6"></td>
+                     <td class="Score6">35</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">7</th>
+                     <td class="User7"></td>
+                     <td class="Score7">35</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">8</th>
+                     <td class="User8"></td>
+                     <td class="Score8">37</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">9</th>
+                     <td class="User9"></td>
+                     <td class="Score9">38</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">10</th>
+                     <td class="User10"></td>
+                     <td class="Score10">38</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+      <div class="footer">
+         <footer>All rights reserved.</footer>
+      </div>
+      <script src="my_app.js"></script>
+   </body>
+</html>
+
