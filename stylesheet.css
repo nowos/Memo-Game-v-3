@@ -260,7 +260,7 @@ footer{
       height: 150px;
       background-color:#056fd8;
       border: 1px black; 
-      margin: 5px auto;
+      margin: 5px 10px;
       display: inline-block;
    }
    .btStart1, .btStart2, .btStart3{
