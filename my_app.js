@@ -16,9 +16,9 @@ var Picks = {
 var imagesBox1 = [
    "images/level1/WilkMEM.jpg",
    "images/level1/KonMEM.jpg",
-   "images/level1/LionMEM.jpg",
+   "images/level1/LionMem.jpg",
    "images/level1/owcaMEM.jpg",
-   "images/level1/LionMEM.jpg",
+   "images/level1/LionMem.jpg",
    "images/level1/WilkMEM.jpg",
    "images/level1/owcaMEM.jpg",
    "images/level1/KonMEM.jpg"
