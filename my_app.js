@@ -243,8 +243,6 @@ var clickFunction = function () {
    $('.deskContainer .emptyImg').click(function (event) {
       clickCounter();
 
-      console.log(event.target);
-
 //jeśli już dopasowana, to wyjdź z funkcji
       if ($(event.target).hasClass('matched')) {
 
@@ -288,7 +286,6 @@ var clickFunction = function () {
       }
       //jeśli wcześniej wybrana karta równa nie obecnemu targetowi
       PickedCard = event.target;
-      console.log(matched);
       if (cards === matched) {
          $('.deskContainer').addClass('animated2 flash');
          setTimeout(winFunction, 3000);
