@@ -1,18 +1,18 @@
-var Click = 0;
-var Round = 1;
-var Matched = 0;
-var Cards;
-var ImagesBox = new Array;
-var RemovedItems = new Array;
-var Lvl;
-var Dx = 0;
-var PickedCard;
+var click = 0;
+var round = 1;
+var matched = 0;
+var cards;
+var imagesBox = new Array;
+var removedItems = new Array;
+var lvl;
+var dx = 0;
+var pickedCard;
 var Picks = {
    first: null,
    last: null
 };
 
-var ImagesBox1 = [
+var imagesBox1 = [
    "images/level1/WilkMEM.jpg",
    "images/level1/KonMEM.jpg",
    "images/level1/LionMem.jpg",
@@ -22,7 +22,7 @@ var ImagesBox1 = [
    "images/level1/owcaMEM.jpg",
    "images/level1/KonMEM.jpg"
 ];
-var ImagesBox2 = [
+var imagesBox2 = [
    "images/level2/ChichenMEM.jpg",
    "images/level2/ColosseumMEM.jpg",
    "images/level2/EifelMEM.jpg",
@@ -36,7 +36,7 @@ var ImagesBox2 = [
    "images/level2/EifelMEM.jpg",
    "images/level2/statueMEM.jpeg"
 ];
-var ImagesBox3 = [
+var imagesBox3 = [
    "images/level3/znak1.png",
    "images/level3/znak2.png",
    "images/level3/znak9.png",
@@ -59,40 +59,40 @@ var ImagesBox3 = [
 
 var btDesk = function () {
       $('.startContainer').click(function (event) {
-         var ClickedButton = event.target;
-         if ($(ClickedButton).hasClass('btStart1')){
-            Cards = 8;
+         var clickedButton = event.target;
+         if ($(clickedButton).hasClass('btStart1')){
+            cards = 8;
             //Lvl
-            ImagesBox = shuffle(ImagesBox1);
+            imagesBox = shuffle(imagesBox1);
             //ustaw level do rankingu
-            Lvl = 1;
+            lvl = 1;
             //kart w rzędzie
-            var InRow = 2;
+            var inRow = 2;
          }
-         if ($(ClickedButton).hasClass('btStart2')){
-            Cards = 12;
+         if ($(clickedButton).hasClass('btStart2')){
+            cards = 12;
             //Lvl
-            ImagesBox = shuffle(ImagesBox2);
+            imagesBox = shuffle(imagesBox2);
             //ustaw level do rankingu
-            Lvl = 2;
+            lvl = 2;
             //kart w rzędzie
-            var InRow = 3;
+            var inRow = 3;
          }
-         if ($(ClickedButton).hasClass('btStart3')){
-            Cards = 16;
+         if ($(clickedButton).hasClass('btStart3')){
+            cards = 16;
             //Lvl
-            ImagesBox = shuffle(ImagesBox3);
+            imagesBox = shuffle(imagesBox3);
             //ustaw level do rankingu
-            Lvl = 3;
+            lvl = 3;
             //kart w rzędzie
-            var InRow = 4;
+            var inRow = 4;
          }
             //rysowanie pola gry 
             for (z = 1; z <= 4; z++) {
                $('.deskContainer').prepend('<div class = "imagesContainer' + z + '">' + '</div>');
-               for (i = 1; i <= InRow; i++) {
-                  Dx = Dx + 1;
-                  $('.imagesContainer' + z).prepend('<div class = "emptyImg' + ' d' + Dx + '"></div>');
+               for (i = 1; i <= inRow; i++) {
+                  dx = dx + 1;
+                  $('.imagesContainer' + z).prepend('<div class = "emptyImg' + ' d' + dx + '"></div>');
                };
             };
             window.location.hash = "#view";
@@ -108,9 +108,9 @@ var btDesk = function () {
 var setRemovedItems = function () {
 
    for (z = 0; z < 30; z++) {
-      var itemR = RemovedItems[z];
+      var itemR = removedItems[z];
       if (itemR !== null && itemR !== 'undefined') {
-         localStorage.setItem(Lvl + " " + z, RemovedItems[z]);
+         localStorage.setItem(lvl + " " + z, removedItems[z]);
       }
    }
 };
@@ -123,13 +123,13 @@ var setRanking = function () {
          var sc = $('.Score' + i).html();
 
          if (z < sc) {
-            var item = localStorage.getItem(Lvl + " " + z);
+            var item = localStorage.getItem(lvl + " " + z);
             if (item !== null && item !== 'undefined') {
 
                $('.Score' + i).html(z);
                $('.User' + i).html(item);
-               localStorage.removeItem(Lvl + " " + z);
-               RemovedItems[z] = item;
+               localStorage.removeItem(lvl + " " + z);
+               removedItems[z] = item;
                break;
             }
          }
@@ -152,7 +152,7 @@ var shuffle = function (array) {
 };
 //funkcja usuwajaca obrazki po zakonczeniu rundy
 var removeImages = function () {
-   for (i = 1; i <= Cards; i++) {
+   for (i = 1; i <= cards; i++) {
       //usuń content, a potem samą klasę additional ze wszystkich div-ów, w których jest 
       $('.additional' + i).css({'background-image': ''});
       $('.d' + i)[0].classList.remove("additional" + i);
@@ -160,42 +160,42 @@ var removeImages = function () {
 };
 //funkcja usuwajaca obrazki po zakonczeniu rundy
 var clickHandler = function () {
-   if (Click >= 2) {
-      Round = Round + 1;
+   if (click >= 2) {
+      round = round + 1;
       removeImages();
       roundFunction();
-      Click = 0;
+      click = 0;
       Picks.first = null;
       Picks.last = null;
    }
 };
 //funkcja ustawiajaca rundy
 var roundFunction = function () {
-   $('.round').text("Round " + Round);
+   $('.round').text("Round " + round);
 };
 //funkcja wygranej, wyswietlajaca sie po dopasowaniu wszystkich par
 var winFunction = function () {
    alert('You won!! Congratulations!! ');
-   Matched = 0;
+   matched = 0;
    window.location.hash = "#view2";
 };
 //funkcja dodawania nazwy uzytkownika do rankingu
 var userName = function () {
    $('.submit').on('click', function () {
-      var Name;
-      var LastName;
-      var Username;
-      Name = $('#inlineFormName').val();
-      LastName = $('#inlineFormLastName').val();
-      Username = Name + ' ' + LastName;
+      var name;
+      var lastName;
+      var userName;
+      name = $('#inlineFormName').val();
+      lastName = $('#inlineFormLastName').val();
+      userName = name + ' ' + lastName;
       window.location.hash = "#view2";
       for (i = 1; i <= 10; i++) {
          var sc = $('.Score' + i).html();
-         if (Round < $('.Score' + i).html()) {
-            //to dodaj w tym miejscu wartość Round, username i przerwij pętle
-            $('.Score' + i).html(Round);
-            $('.User' + i).html(Username);
-            localStorage.setItem(Lvl + " " + Round, Username);
+         if (round < $('.Score' + i).html()) {
+            //to dodaj w tym miejscu wartość round, username i przerwij pętle
+            $('.Score' + i).html(round);
+            $('.User' + i).html(userName);
+            localStorage.setItem(lvl + " " + round, userName);
             break;
          }
       }
@@ -211,13 +211,13 @@ var clickFunction = function () {
          return;
       };
       //jeśli wybrano tą samą kartę, co poprzednio
-      if (PickedCard === event.target) {
+      if (pickedCard === event.target) {
          return;
       }
       //pokaż obrazek kryjący się - założenie, że nie będzie więcej niż 99 obrazków
       //znajdź po charach obrazek
 //jeśli nie kliknąłeś w tą samą lub dopasowaną kartę - licz kliknięcie
-      Click = Click + 1;
+      click = click + 1;
       var fieldChosen = $(event.target)[0].className;
       var secondChar = fieldChosen.charAt(fieldChosen.length - 1);
 
@@ -231,24 +231,24 @@ var clickFunction = function () {
       //dopasuj obrazek 
       $(event.target).addClass('additional' + char);
       $('.additional' + char).css('background-size', '100% 100%');
-      $('.additional' + char).css('background-image', 'url' + '("' + ImagesBox[char - 1] + '")');
+      $('.additional' + char).css('background-image', 'url' + '("' + imagesBox[char - 1] + '")');
       //dodaj obrazki do objektu Picks 
       if (Picks.first === null) {
-         Picks.first = ImagesBox[char - 1];
+         Picks.first = imagesBox[char - 1];
       } else {
-         Picks.last = ImagesBox[char - 1];
+         Picks.last = imagesBox[char - 1];
       }
       if (Picks.first === Picks.last) {
          $(event.target).addClass('animated bounceOut');
-         $(PickedCard).addClass('animated bounceOut');
-         Matched = Matched + 2;
+         $(pickedCard).addClass('animated bounceOut');
+         matched = matched + 2;
                  
       } else if (Picks.first !== null && Picks.last !== null) {
          setTimeout(clickHandler, 800);
       }
       //jeśli wcześniej wybrana karta równa nie obecnemu targetowi
-      PickedCard = event.target;
-      if (Cards === Matched) {
+      pickedCard = event.target;
+      if (cards === matched) {
          $('.deskContainer .empty').addClass('animated2 flash');
          setTimeout(winFunction, 3000);
       }
