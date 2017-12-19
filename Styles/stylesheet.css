@@ -60,11 +60,13 @@ h1,h2{
 .deskContainer{
    margin:0 auto;
    width: -webkit-fit-content; 
+   width: -moz-fit-content
    background-color:#f5f9fd;
    border: 1px solid #69b0f7;
 }
 .imagesContainer1, .imagesContainer2, .imagesContainer3, .imagesContainer4{
-   width: -webkit-fit-content; 
+   width: -webkit-fit-content;
+   width: -moz-fit-content;
    padding: 0px;
    margin: 0 auto;
    height: auto;
